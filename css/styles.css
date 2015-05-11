@@ -1,0 +1,50 @@
+/*
+Desiree's Portfolio v.1
+Author: Desiree Mathurin
+*/
+
+
+body{
+	background-color: #6284B2;
+	padding-top: 0px
+}
+
+.header{
+	font-family: 'Philosopher', sans-serif;
+	color:#6284B2;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 125px;
+	background-color:black;
+	padding-top: 25px;
+	padding-bottom: 5px;
+	margin:150px 50px 25px 50px;
+}
+
+hr{
+	border-color: 980002;
+	border-style: solid;
+	border-width: 10px;
+}
+
+div{
+	background-color: white;
+	margin-right: 50px;
+	margin-left:50px;
+}
+#divupdate{
+	background-color: white;
+	font-family: georgia, times, serif;
+	text-align: justify;
+	padding: 10px 10px 10px 10px;
+	
+	position: relative;
+	z-index: 400;
+	
+}
+.divright{
+	float:right;
+	width: 40%;
+	margin-bottom: 60px;
+
+}
