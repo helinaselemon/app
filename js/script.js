@@ -9,7 +9,7 @@ $(document).ready(function(){
 // }); 	
 
 	$.ajax({
-		url:'https://github.com/BurntSushi/nflgame/blob/master/nflgame/players.json',
+		url:'http://api.football-data.org/alpha/fixtures?api=d00751cc49e845b18e9185d72e7a7713',
 		dataType:'json',
 		success:function(data){
 			console.log(data);
