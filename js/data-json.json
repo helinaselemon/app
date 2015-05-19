@@ -1,0 +1,7 @@
+$.ajax({
+  headers: { 'X-Auth-Token': 'd00751cc49e845b18e9185d72e7a7713' },
+  url: 'http://api.football-data.org/alpha/fixtures?timeFrame=n1',
+  dataType: 'json',
+  type: 'GET',
+}).done(function(response) {console.log(response);  
+}); 
