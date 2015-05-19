@@ -25,35 +25,40 @@ Injury Alert
 
 
 
-<select>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
+<select id="week-list">
+  <option value="week-1">Week1</option>
+  <option value="week-2">Week2</option>
+  <option value="week-3">Week3</option>
+  <option value="week-4">Week4</option>
+  <option value="week-5">Week5</option>
+  <option value="week-6">Week6</option> 
+  <option value="week-7">Week7</option>
+  <option value="week-8">Week8</option> 
+  <option value="week-9">Week9</option>
+  <option value="week-10">Week10</option> 
+  <option value="week-11">Week11</option>
+  <option value="week-12">Week12</option> 
+  <option value="week-13">Week13</option>
+  <option value="week-14">Week14</option>
+  <option value="week-15">Week15</option>
+  <option value="week-16">Week16</option> 
+  <option value="week-17">Week17</option>
 </select>
 
-
+<div id="weeks"></div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="slick/slick.min.js"></script>
   <script>
     $(document).ready(function(){
- $('.photo-carousel').slick({
-
- 	autoplay:true,
- 	autoplaySpeed:2500,
-
- 	
- 	
-
- });
-
-
+      $('.dropdown-menu').slick({
+        autoplay:true,
+ 	      autoplaySpeed:2500,
+      });
     });
   </script>
-<script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
  </body>
   </html>
  

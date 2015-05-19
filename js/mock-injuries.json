@@ -1,16 +1,6 @@
-$(document).ready(function(){
-	// $.ajax({
-	// 	url:'./js/mock-injuries.json',
-	// 	dataType:'json',
-	// 	success:function(data){
-	// 		console.log("TEST");
-	// 		console.log(data);
-	// 	}
-	// });
-
-	var data = [
+[
 		{
-			"week": "week-1", 
+			"week": 1, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -48,7 +38,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-2", 
+			"week": 2, 
 			"teams":[
 				{"name":"New York Giants","injuries":9},
 				{"name":"Dallas Cowboys","injuries":10},
@@ -86,7 +76,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-3", 
+			"week": 3, 
 			"teams":[
 				{"name":"New York Giants","injuries":7},
 				{"name":"Dallas Cowboys","injuries":12},
@@ -124,7 +114,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-4", 
+			"week": 4, 
 			"teams":[
 				{"name":"New York Giants","injuries":7},
 				{"name":"Dallas Cowboys","injuries":9},
@@ -162,7 +152,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-5", 
+			"week": 5, 
 			"teams":[
 				{"name":"New York Giants","injuries":4},
 				{"name":"Dallas Cowboys","injuries":6},
@@ -200,7 +190,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-6",
+			"week": 6, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -238,7 +228,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-7",
+			"week": 7, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -276,7 +266,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-8", 
+			"week": 8, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -314,7 +304,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-9",
+			"week": 9, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -352,7 +342,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-10", 
+			"week": 10, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -390,7 +380,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-11", 
+			"week": 11, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -428,7 +418,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-12", 
+			"week": 12, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -466,7 +456,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-13", 
+			"week": 13, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -504,7 +494,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-14",
+			"week": 14, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -542,7 +532,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-15", 
+			"week": 15, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -580,7 +570,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-16",
+			"week": 16, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -618,7 +608,7 @@ $(document).ready(function(){
 			]
 		},
 	{
-			"week": "week-17", 
+			"week": 17, 
 			"teams":[
 				{"name":"New York Giants","injuries":6},
 				{"name":"Dallas Cowboys","injuries":7},
@@ -657,50 +647,3 @@ $(document).ready(function(){
 		}
 
 	]
-
-	putDataOnPage();
-	manageDropDown();
-
-	function putDataOnPage(){
-		//loop through data and add injury lists to page, then hide'
-		// $('.week-box').hide();
-			$.each(data,function(index,week){//code goes here
-				// console.log(week);
-				// console.log(week.week); // week id 
-				// console.log(week.teams); //array of teams and injuries to loop through
-				var weekNum = index + 1;
-				var weekBox = '<div class="week-box" id="week-'+weekNum+'"><h2>'+week.week+'</h2><ul></ul></div>';
-				$('#weeks').append(weekBox);
-
-				console.log(week.teams);
-				$.each(week.teams,function(index,team){
-					var listItem = "<li>"+team.name+": "+team.injuries+"</li>";
-					console.log(listItem);
-					$('#week-'+weekNum+' ul').append(listItem);
-				});
-
-			});
-	
-			$('.week-box').hide();
-	}
-
-	function manageDropDown(){
-
-		$('#week-list').change(function(){
-			var weeklist = document.getElementById('week-list');
-			var selectedWeek = weeklist.options[weeklist.selectedIndex].value;
-			console.log(selectedWeek);
-		$.each($('.week-box'),function(index,weekBox){
-			$(weekBox).slideUp();
-		}); 
-		$('#'+ selectedWeek).slideDown();
-
-		});
-		//grab the value of the drop down item selected
-		//loop through data and match that value to the corresponding week in your data
-		//show selected week
-	}
-
-	console.log(data);
-	
-}); 
